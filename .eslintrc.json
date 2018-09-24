@@ -1,0 +1,73 @@
+{
+  "extends": [
+    "iadvize"
+  ],
+  "globals": {
+    "$": true,
+    "$T": true,
+    "mixpanel": true,
+    "settings": true,
+    "trad": true,
+    "baseUrl": true,
+    "iAdvize": true,
+    "jQuery": true,
+    "activatePlayer": true,
+    "prepare_sorting": true,
+    "prepare_pagination": true,
+    "prepare_table": true,
+    "enableFancySelect": true,
+    "enable_tooltip": true,
+    "enableItoggle": true,
+    "resizeHeap": true,
+    "enableNavScroll": true,
+    "prepare_shortcut": true,
+    "resizeHelp": true,
+    "itoggle_shutdown": true,
+    "showAlertBar": true
+  },
+  "overrides": [{
+    "files": [
+      "**/*.test.js*",
+      "**/*.test.es6"
+    ],
+    "env": {
+      "mocha": true
+    },
+    "globals": {
+      "assert": true,
+      "sinon": true,
+      "expect": true,
+      "shallow": true,
+      "mount": true
+    },
+    "rules": {
+      "no-unused-expressions": "off"
+    }
+  }],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/prefer-es6-class": "warn",
+    "import/extensions": "warn",
+    "global-require": "warn",
+    "react/forbid-prop-types": "warn",
+    "react/no-deprecated": "error",
+    "react/prefer-stateless-function": "warn",
+    "react/jsx-no-target-blank": "warn",
+    "react/sort-comp": "warn",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "children",
+          "className"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "16.4"
+    }
+  }
+}
